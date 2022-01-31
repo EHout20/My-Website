@@ -1,0 +1,227 @@
+/*Assigns propeties for everything within the page*/
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin:0;
+  padding:0;
+}
+/* changes text color to white*/
+a{
+  color:#ffff;
+}
+/* changes text color to white and changes how thick the text will be*/
+h1{
+  color:#ffff;
+  font-weight:1000;
+}
+/* changes text color to white*/
+h2{
+  color:#ffff;
+}
+/*Tells that Porject hub will take up 100% of a page*/
+#project_hub{
+  min-height:100%;
+}
+/*propeties for body*/
+html,body{
+  height:100%;
+  background-size: auto;
+  overflow:auto;
+  margin:0px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:#8AAAE5;
+}
+/*Propeties for Title of the page*/
+#project_hub h1{
+  font-size:48px;
+  margin-bottom:5px;
+  padding-top:25px;
+  text-align:center;
+}
+/*Propeties of the navigation bar on top*/
+.topnav {
+  padding-right:50px;
+  box-sizing:border-box;
+  overflow: hidden;
+  background-color: transparent;
+  top:0;
+  font-weight:1000;
+  padding-left:50px;
+}
+/*Propeties for the the text on the farright of the navigation bard*/
+.topnav h1{
+  color:#ffff;
+  float: Right;
+  padding: 14px 16px;
+  font:strong;
+  font-size:17px;
+  font-weight:1000;
+}
+/*Propeties fo rhte links in the navigation bar*/
+.topnav a {
+  float: left;
+  color: #ffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  }
+  /*change colors when links are hovered in top navigation bar*/
+.topnav a:hover {
+  background-color: #ffff;
+  color: black;
+}
+/*THe active page in the top nav will have different color and wil be underlined*/
+.topnav a.active{
+  background-color: #ffff;
+  color:#8AAAE5;
+  text-decoration:underline 5px;
+}
+/*When active page name is hovered change color and underline text*/
+.topnav a.active:hover{
+  background-color:#ffff;
+  color: black;
+  text-decoration:underline 5px;
+}
+/*Active Page name in top nav will have different color and will be underlined*/
+.topnav h1.active {
+  background-color: #ffff;
+  color:#8AAAE5;
+  text-decoration:underline 5px;
+}
+/* Makes sure that the rows will have columns that are next to each other*/
+.row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+}
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex:25%; 
+  flex:25%;
+  max-width:25%;
+  padding: 20px 4px;
+}
+/*Images are alligned in teh center of their column respectively*/
+.column img{
+  margin-top: 8px;
+  vertical-align: middle;
+  width:100%;
+}
+/*Makes sure things in images div cannot have any other thing on top of the things in image div*/
+.images{
+  position:block;
+}
+/*Puts container in its normal(original position*/
+.images_container{
+  position: relative;
+}
+/*Sets properties to be used to create a blur when image is hovered*/
+.image_overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity:0;
+    transition: opacity 0.25s;
+    backdrop-filter: blur(5px);
+}
+/*When images in columns are hovered show the dark/blurred background*/
+.images:hover .image_overlay {
+    opacity: 1;
+}
+/*Text that will be shown when image in column is hovered, sets properties like font,color, and position*/
+.image_title {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/*Sets background color for footer*/
+.footer-container{
+  background-color: #ffff;
+  padding-bottom:4 rem;
+  margin:auto;
+}
+/*Centers content in footer and organizes the items in footer*/
+.footer1{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin:auto;
+  clear: both;
+}
+/**/
+.footer-heading{
+  width:25%;
+  display:flex;
+  flex-direction:column;
+  margin-right: 50px;
+  line-height: 1.5;
+  transition:1.5s ease-out;
+}
+.footer-heading a h2{
+  margin-bottom:12px;
+  position: relative;
+  color:#8AAAE5;
+  font-weight:1000;
+}
+.footer-heading ul li a {
+  color:#8AAAE5;
+  text-decoration:none;
+  margin-bottom:0.5rem;
+  display: block;
+  font-weight:400;
+}
+.footer-heading ul li a:hover{
+	padding-left:8px;
+}
+ul{
+  list-style-type: none;
+}
+@media(max-width: 900px){
+  .footer-heading{
+    width: 25%;
+    margin-bottom:30px;
+}
+}
+@media(max-width: 700px){
+  .footer-heading{
+    width: 100%;
+    padding-left:5rem;
+}
+}
+@media(max-width: 700px){
+  .topnav{
+    margin:0;
+    padding:0;
+}
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
